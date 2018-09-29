@@ -10,8 +10,8 @@ import pymysql
 def get_connection_sql():
     try:
         db = pymysql.connect(host="192.168.12.153",
-                             user="swistov",
-                             passwd="rfnvfylE1988",
+                             user="math",
+                             passwd="NPISmPVI5I9C",
                              charset="utf8",
                              connect_timeout=1)
         return db
@@ -50,8 +50,8 @@ def send_error_email(e):
     import smtplib
 
     # Данные для подключения
-    fromaddr = 'n.svistov@smter.ru'
-    password = 'rfnvfylE1988'
+    fromaddr = '******'
+    password = '******'
 
     # формирование сообщения
     msg = MIMEText(str(e), "", "utf-8")
@@ -61,7 +61,7 @@ def send_error_email(e):
 
     # отправка
     # smtp = SMTP_SSL()
-    smtp = smtplib.SMTP('pochta.smter.ru:587')
+    smtp = smtplib.SMTP('******:587')
     smtp.ehlo()
     smtp.starttls()
     smtp.ehlo()
@@ -155,5 +155,5 @@ else:
     print('"2" Нужно ещё подтянуть')
     appreciation = 2
 
-# Пишемв базу
+# Пишем в базу
 insert_data_sql(str(time_now).split('.')[0], appreciation, time_for_decision, truly, not_truly)
