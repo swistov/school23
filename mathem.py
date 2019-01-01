@@ -1,7 +1,3 @@
-# !/usr/bin/python3
-
-# -*- coding: utf-8
-
 import random
 import numexpr as ne
 from datetime import datetime
@@ -30,14 +26,14 @@ class RunMathem(object):
         while i < self.number_of_jobs:
 
 
-            print('########## Задание №' + str(task) + ' ##########')
+            print('########## Задание №' + str(self.task) + ' ##########')
             print(expr)
             if valid_answer(input('Введи ответ: ')) == answer:
                 # print('Правильный ответ')
-                truly += 1
+                self.truly += 1
             else:
                 # print('Не верно')
-                not_truly += 1
+                self.not_truly += 1
             task += 1
             i += 1
 
