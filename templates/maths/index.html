@@ -1,0 +1,20 @@
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="form-section">
+        <h2>Задания</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form }}
+            <button type="submit" class="btn btn-outline-warning">Ответить</button>
+        </form>
+
+    </div>
+</body>
+</html>
